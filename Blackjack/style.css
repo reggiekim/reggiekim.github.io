@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(30, 30, 30);
+}
+
+#table {
+  height: 400px;
+  width: 850px;
+  border-radius: 200px;
+  border: 30px solid maroon;
+  background-color: darkgreen;
+  margin: 100px auto;
+}
+
+button {
+  width: 100px;
+  height: 25px;
+  margin: 15px;
+}
+
+#action-btn {
+  position: absolute;
+  margin-top: 325px;
+  margin-left: 250px;
+}
+
+#split, #double {
+  display: none;
+}
+
+#up, #down {
+  width: 50px;
+}
+
+#bank-count {
+  position: absolute;
+}
+
+#bet-count {
+  position: absolute;
+  margin-top: 275px;
+  margin-left: 110px;
+}
+
+#dealer-status {
+  position: absolute;
+}
+
+#player-status {
+  position: absolute;
+}
