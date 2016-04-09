@@ -1,0 +1,109 @@
+body {
+  background: url(images/votebackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+H1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36pt;
+}
+
+H2 {
+  text-align: center;
+  font-family: 'Cardo', serif;
+  font-size: 16pt;
+}
+
+#container {
+  height: 620px;
+  width: 620px;
+  margin: 0 auto;
+}
+
+
+.box {
+  height: 200px;
+  width: 200px;
+  float: left;
+}
+
+#upper-left {
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#upper-mid {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+#upper-right {
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+
+#mid-left {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+
+#mid-mid {
+  border: 5px solid black;
+}
+
+
+#mid-right {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  border-left: 5px solid black;
+}
+
+
+#bottom-left {
+  border-top: 5px solid black;
+  border-right: 5px solid black;
+}
+
+
+#bottom-mid {
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+
+#bottom-right {
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+}
+
+
+.states {
+  max-width: 175px;
+  max-height: 175px;
+  margin: 15px;
+  position: absolute;
+
+}
+
+
+.pic {
+  max-width: 150px;
+  max-height: 150px;
+  position: absolute;
+  margin: 20px;
+}
+
+.gif {
+  position: absolute;
+  width: 620px;
+  display: block;
+  top: 300px;
+}
+
