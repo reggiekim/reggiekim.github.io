@@ -13,7 +13,7 @@ var bottomMid = $("#bottom-mid");
 var bottomRight = $("#bottom-right");
 
 var playerTurn = 0;
-var game = [[2, 3, 4], [5, 6, 7], [8, 9, 10]];
+var game = [[null, null, null], [null, null, null], [null, null, null]];
 
 var bernie = $("<img class='pic' src='images/bernie.png'>");
 var hillary = $("<img class='pic' src='images/hillary.png'>");
@@ -223,28 +223,28 @@ bottomRight.click(function() {
 
 
 var checkThrees = function() {
-  if (game[0][0] === game[0][1] && game[0][1] === game[0][2]) {
+  if (game[0][0] >=0 && game[0][0] === game[0][1] && game[0][1] === game[0][2]) {
     console.log("across top");
     return game[0][0];
-  } else if (game[1][0] === game[1][1] && game[1][1] === game[1][2]) {
+  } else if (game[1][0] >=0 && game[1][0] === game[1][1] && game[1][1] === game[1][2]) {
     console.log("across middle");
     return game[1][0];
-  } else if (game[2][0] === game[2][1] && game[2][1] === game[2][2]) {
+  } else if (game[2][0] >=0 && game[2][0] === game[2][1] && game[2][1] === game[2][2]) {
     console.log("across bottom");
     return game[2][0];
-  } else if (game[0][0] === game[1][0] && game[1][0] === game[2][0]) {
+  } else if (game[0][0] >=0 && game[0][0] === game[1][0] && game[1][0] === game[2][0]) {
     console.log("down left");
     return game [0][0];
-  } else if (game[0][1] === game[1][1] && game[1][1] === game[2][1]) {
+  } else if (game[0][1] >=0 && game[0][1] === game[1][1] && game[1][1] === game[2][1]) {
     console.log("down middle");
     return game [0][1];
-  } else if (game[0][2] === game[1][2] && game[1][2] === game[2][2]) {
+  } else if (game[0][2] >=0 && game[0][2] === game[1][2] && game[1][2] === game[2][2]) {
     console.log("down right");
     return game[0][2];
-  } else if (game[0][0] === game[1][1] && game[1][1] === game[2][2]) {
+  } else if (game[0][0] >=0 && game[0][0] === game[1][1] && game[1][1] === game[2][2]) {
     console.log("fwd slash");
     return game[0][0];
-  } else if (game[0][2] === game[1][1] && game[1][1] === game[2][0]) {
+  } else if (game[0][2] >=0 && game[0][2] === game[1][1] && game[1][1] === game[2][0]) {
     console.log("back slash");
     return game[0][2];
   }
