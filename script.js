@@ -13,7 +13,7 @@ var bottomMid = $("#bottom-mid");
 var bottomRight = $("#bottom-right");
 
 var playerTurn = 0;
-var game = [[null, null, null], [null, null, null], [null, null, null]];
+var game = [[2, 3, 4], [5, 6, 7], [8, 9, 10]];
 
 var bernie = $("<img class='pic' src='images/bernie.png'>");
 var hillary = $("<img class='pic' src='images/hillary.png'>");
@@ -30,14 +30,11 @@ var bernOrHill = function() {
       $(this).addClass('selected');
       $(this).css("background-color","navy");
       $(this).append(bernie.clone());
-      return "bernie"
     } else {
       $(this).addClass('selected');
       $(this).css("background-color","maroon");
       $(this).append(hillary.clone());
-      return "hillary"
     }
-
   }
 }
 
@@ -45,148 +42,183 @@ var bernOrHill = function() {
 
 upperLeft.click(bernOrHill);
 upperLeft.click(function() {
-  if (playerTurn%2===0) {
-    console.log('bernie!')
-    game[0][0] = 0;
-    playerTurn++;
-    console.log(game);
+  if (upperLeft.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log('Hillary!')
-    game[0][0] = 1;
-    console.log(game);
+    if (playerTurn%2===0) {
+      console.log('bernie!')
+      game[0][0] = 0;
+    } else {
+      console.log('Hillary!')
+      game[0][0] = 1;
+    }
+    upperLeft.addClass('marked');
     playerTurn++;
+    console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 })
-
 
 
 upperMid.click(bernOrHill);
 upperMid.click(function() {
-  if (playerTurn%2===0) {
-    console.log('bernie!')
-    game[0][1] = 0;
-    playerTurn++;
-    console.log(game);
+  if (upperMid.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log('hillary!!')
-    game[0][1] = 1;
+    if (playerTurn%2===0) {
+      console.log('bernie!')
+      game[0][1] = 0;
+    } else {
+      console.log('hillary!!')
+      game[0][1] = 1;
+    }
+    upperMid.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 upperRight.click(bernOrHill);
 upperRight.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie!")
-    game[0][2] = 0;
-    playerTurn++
-    console.log(game);
+  if (upperRight.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary")
-    game[0][2] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie!")
+      game[0][2] = 0;
+    } else {
+      console.log("hillary")
+      game[0][2] = 1;
+    }
+    upperRight.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 midLeft.click(bernOrHill);
 midLeft.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie!");
-    game[1][0] = 0;
-    playerTurn++
-    console.log(game);
+  if (midLeft.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary");
-    game[1][0] = 1;
-    playerTurn++
+    if (playerTurn%2===0) {
+      console.log("bernie!");
+      game[1][0] = 0;
+    } else {
+      console.log("hillary");
+      game[1][0] = 1;
+    }
+    midLeft.addClass('marked');
+    playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 midMid.click(bernOrHill);
 midMid.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie!");
-    game[1][1] = 0;
-    playerTurn++;
-    console.log(game);
+  if (midMid.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary!");
-    game[1][1] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie!");
+      game[1][1] = 0;
+    } else {
+      console.log("hillary!");
+      game[1][1] = 1;
+    }
+    midMid.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 midRight.click(bernOrHill);
 midRight.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie!");
-    game[1][2] = 0;
-    playerTurn++
-    console.log(game);
+  if (midRight.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary");
-    game[1][2] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie!");
+      game[1][2] = 0;
+    } else {
+      console.log("hillary");
+      game[1][2] = 1;
+    }
+    midRight.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 bottomLeft.click(bernOrHill);
 bottomLeft.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie!");
-    game[2][0] = 0;
-    playerTurn++;
-    console.log(game);
+  if (bottomLeft.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary");
-    game[2][0] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie!");
+      game[2][0] = 0;
+    } else {
+      console.log("hillary");
+      game[2][0] = 1;
+    }
+    bottomLeft.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 bottomMid.click(bernOrHill);
 bottomMid.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie");
-    game[2][1] = 0;
-    playerTurn++;
-    console.log(game);
+  if (bottomMid.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("Hillary");
-    game[2][1] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie");
+      game[2][1] = 0;
+    } else {
+      console.log("Hillary");
+      game[2][1] = 1;
+    }
+    bottomMid.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 bottomRight.click(bernOrHill);
 bottomRight.click(function() {
-  if (playerTurn%2===0) {
-    console.log("bernie");
-    game[2][2] = 0;
-    playerTurn++;
-    console.log(game);
+  if (bottomRight.hasClass('marked')) {
+    console.log("already marked");
   } else {
-    console.log("hillary");
-    game[2][2] = 1;
+    if (playerTurn%2===0) {
+      console.log("bernie");
+      game[2][2] = 0;
+    } else {
+      console.log("hillary");
+      game[2][2] = 1;
+    }
+    bottomRight.addClass('marked');
     playerTurn++;
     console.log(game);
+    console.log("playerturn is: "+playerTurn);
+    checkWinner();
   }
-  checkWinner();
 });
 
 
@@ -231,12 +263,6 @@ var checkWinner = function() {
     $("#container").append(trump);
   }
 }
-
-
-
-
-
-
 
 
 })
