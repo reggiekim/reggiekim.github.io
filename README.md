@@ -1,7 +1,7 @@
 
 
 #Tic-Tac-Dem
-###By Reggie Kim
+####By Reggie Kim
 
 ##Description
 The classic game of Tic-Tac-Toe, but with presidential candidates! Win three states in a row to win the game. Try to win because a tie only helps the leading candidate in the opposing party.
