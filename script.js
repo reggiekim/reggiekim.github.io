@@ -255,12 +255,15 @@ var checkWinner = function() {
   if (whoWon===0) {
     console.log("President Bernie!");
     $("#container").append(bernieGif);
+    setTimeout(function(){location.reload()}, 3000);
   } else if (whoWon===1) {
     console.log("President clinton");
     $("#container").append(hillaryGif);
+    setTimeout(function(){location.reload()}, 3000);
   } else if (playerTurn===9) {
     console.log('Trump wins :(');
     $("#container").append(trump);
+    setTimeout(function(){location.reload()}, 5000);
   }
 }
 
